@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+    --color-brown-800: hsl(14, 45%, 36%);
+    --color-rose-800: hsl(332, 51%, 32%);
+    --color-rose-50: hsl(330, 100%, 98%);
+    --spacing-1600: 8rem;
+    --spacing-600: 3rem;
+    --spacing-500: 2.5rem;
+    --spacing-400: 2rem;
+    --spacing-300: 1.5rem;
+    --spacing-200: 1rem;
+    --spacing-150: 0.75rem;
+    --spacing-100: 0.5rem;
+    --font-size-desktop-title: 2.5rem;
+    --font-size-desktop-heading: 1.75rem;
+    --font-size-desktop-prep: 1.25rem;
+    --font-size-mobile-title: 2.25rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-1600) var(--spacing-600);
+    background-color: var(--color-stone-100);
+}
+
+.card {
+    background-color: var(--color-white);
+    display: flex;
+    width: 100%;
+    max-width: 46rem;
+    flex-direction: column;
+    padding: var(--spacing-500);
+    gap: var(--spacing-500);
+    border-radius: var(--spacing-300);
+    color: var(--color-stone-600);
+    box-sizing: border-box;
+}
+
+.text-preset-1 {
+    /* Desktop/text-preset-1 */
+    font-family: "Young Serif";
+    font-size: var(--font-size-desktop-title, 2.5rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 2.5rem */
+    color: var(--color-stone-900);
+}
+
+.text-preset-2 {
+    font-family: "Young Serif";
+    font-size: var(--font-size-desktop-heading, 1.75rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 1.75rem */
+}
+
+.text-preset-3 {
+    font-family: "Outfit";
+    font-size: var(--font-size-desktop-prep, 1.25rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 1.25rem */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+.text-preset-4 {
+    /* Desktop/text-preset-4 */
+    font-family: "Outfit";
+    font-size: var(--font-size-desktop-text-preset-4, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+}
+
+.prep-container {
+    padding: var(--spacing-300);
+    gap: var(--spacing-200);
+    background-color: var(--color-rose-50);
+}
+
+.prep-container > .rose-800 {
+    color: var(--color-rose-800);
+}
+
+.brown-800 {
+    color: var(--color-brown-800);
+}
+
+.card h2 {
+    color: var(--color-brown-800);
+}
+
+.rounded-corner {
+    border-radius: var(--spacing-150);
+}
+
+.body-container {
+    gap: var(--spacing-300);
+}
+
+ol li, ul li {
+    padding-left: var(--spacing-200);
+}
+
+ul, ol {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-left: var(--spacing-300);
+    gap: var(--spacing-100);
+}
+
+.bold, b {
+    font-weight: 700;
+}
+
+.line {
+    height: 0.0625rem;
+    background: var(--color-stone-150);
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+}
+
+.nutrition-row {
+    display: flex;
+    padding: 0 var(--spacing-400);
+    gap: var(--spacing-200);
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.nutrition-label, .nutrition-value {
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0;
+        background-color: var(--color-white);
+    }
+
+    .text-preset-1 {
+        font-size: var(--font-size-mobile-title);
+    }
+
+    .card {
+        gap: 0;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .text-content {
+        padding: var(--spacing-500) var(--spacing-400);
+    }
+
+    img {
+        border-radius: 0;
+    }
+
+}
